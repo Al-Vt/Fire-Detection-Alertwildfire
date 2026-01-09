@@ -1,0 +1,8 @@
+# On installe d'abord Ultralytics
+ultralytics==8.1.0
+opencv-python-headless>=4.8
+
+# ENSUITE, on force la réinstallation de PyTorch en version CPU (légère) et compatible (2.5.1)
+# Cela va écraser la version lourde installée par ultralytics
+torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu

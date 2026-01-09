@@ -1,0 +1,5 @@
+pyarrow==14.0.1
+numpy<2.0.0
+mlflow
+boto3
+psycopg2-binary

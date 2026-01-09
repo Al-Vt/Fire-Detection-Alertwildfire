@@ -1,0 +1,112 @@
+2026-01-08 22:56:04,862 - INFO - Found credentials in environment variables.
+2026-01-08 22:56:05,359 - INFO - Démarrage Batch 20260108_225604...
+2026-01-08 22:56:05,361 - INFO - ====== WebDriver manager ======
+2026-01-08 22:56:05,658 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:56:05,805 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:56:05,954 - INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/143.0.7499.192/chromedriver-linux64/chromedriver] found in cache
+2026-01-08 22:56:06,778 - INFO - Lancement du batch sur 10 caméras...
+2026-01-08 22:56:06,779 - INFO - Traitement: ca-alder-hill-1
+2026-01-08 22:56:15,262 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/ca-alder-hill-1.png, Local=alertwildfire_data/raw/20260108_225604/ca-alder-hill-1.png
+2026-01-08 22:56:16,266 - INFO - Traitement: ca-alpine-meadows-ctc-1
+2026-01-08 22:56:22,090 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/ca-alpine-meadows-ctc-1.png, Local=alertwildfire_data/raw/20260108_225604/ca-alpine-meadows-ctc-1.png
+2026-01-08 22:56:23,093 - INFO - Traitement: ca-alta-peak-1
+2026-01-08 22:56:44,044 - WARNING - Fallback conteneur pour ca-alta-peak-1
+2026-01-08 22:56:44,096 - ERROR - ❌ ÉCHEC ca-alta-peak-1: Message: no such element: Unable to locate element: {"method":"css selector","selector":".ui-layout-center, #firecam-view"}
+  (Session info: chrome=143.0.7499.192); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x62bdcc3cc40a <unknown>
+#1 0x62bdcbe0076b <unknown>
+#2 0x62bdcbe51e88 <unknown>
+#3 0x62bdcbe520c1 <unknown>
+#4 0x62bdcbea02c4 <unknown>
+#5 0x62bdcbe9d760 <unknown>
+#6 0x62bdcbe447b2 <unknown>
+#7 0x62bdcbe45461 <unknown>
+#8 0x62bdcc394df9 <unknown>
+#9 0x62bdcc397d5d <unknown>
+#10 0x62bdcc37db41 <unknown>
+#11 0x62bdcc39893b <unknown>
+#12 0x62bdcc364870 <unknown>
+#13 0x62bdcc3b9828 <unknown>
+#14 0x62bdcc3b99fc <unknown>
+#15 0x62bdcc3cb763 <unknown>
+#16 0x79f83b616044 <unknown>
+
+2026-01-08 22:56:46,035 - INFO - Traitement: id-anderson-1
+2026-01-08 22:57:06,894 - WARNING - Fallback conteneur pour id-anderson-1
+2026-01-08 22:57:06,928 - ERROR - ❌ ÉCHEC id-anderson-1: Message: no such element: Unable to locate element: {"method":"css selector","selector":".ui-layout-center, #firecam-view"}
+  (Session info: chrome=143.0.7499.192); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x62bdcc3cc40a <unknown>
+#1 0x62bdcbe0076b <unknown>
+#2 0x62bdcbe51e88 <unknown>
+#3 0x62bdcbe520c1 <unknown>
+#4 0x62bdcbea02c4 <unknown>
+#5 0x62bdcbe9d760 <unknown>
+#6 0x62bdcbe447b2 <unknown>
+#7 0x62bdcbe45461 <unknown>
+#8 0x62bdcc394df9 <unknown>
+#9 0x62bdcc397d5d <unknown>
+#10 0x62bdcc37db41 <unknown>
+#11 0x62bdcc39893b <unknown>
+#12 0x62bdcc364870 <unknown>
+#13 0x62bdcc3b9828 <unknown>
+#14 0x62bdcc3b99fc <unknown>
+#15 0x62bdcc3cb763 <unknown>
+#16 0x79f83b616044 <unknown>
+
+2026-01-08 22:57:08,703 - INFO - Traitement: nv-angel-peak-1
+2026-01-08 22:57:14,148 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/nv-angel-peak-1.png, Local=alertwildfire_data/raw/20260108_225604/nv-angel-peak-1.png
+2026-01-08 22:57:15,150 - INFO - Traitement: nv-armstrong-lookout-1
+2026-01-08 22:57:36,170 - WARNING - Fallback conteneur pour nv-armstrong-lookout-1
+2026-01-08 22:57:36,202 - ERROR - ❌ ÉCHEC nv-armstrong-lookout-1: Message: no such element: Unable to locate element: {"method":"css selector","selector":".ui-layout-center, #firecam-view"}
+  (Session info: chrome=143.0.7499.192); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x62bdcc3cc40a <unknown>
+#1 0x62bdcbe0076b <unknown>
+#2 0x62bdcbe51e88 <unknown>
+#3 0x62bdcbe520c1 <unknown>
+#4 0x62bdcbea02c4 <unknown>
+#5 0x62bdcbe9d760 <unknown>
+#6 0x62bdcbe447b2 <unknown>
+#7 0x62bdcbe45461 <unknown>
+#8 0x62bdcc394df9 <unknown>
+#9 0x62bdcc397d5d <unknown>
+#10 0x62bdcc37db41 <unknown>
+#11 0x62bdcc39893b <unknown>
+#12 0x62bdcc364870 <unknown>
+#13 0x62bdcc3b9828 <unknown>
+#14 0x62bdcc3b99fc <unknown>
+#15 0x62bdcc3cb763 <unknown>
+#16 0x79f83b616044 <unknown>
+
+2026-01-08 22:57:37,686 - INFO - Traitement: nv-armstrong-lookout-2
+2026-01-08 22:57:58,846 - WARNING - Fallback conteneur pour nv-armstrong-lookout-2
+2026-01-08 22:57:58,876 - ERROR - ❌ ÉCHEC nv-armstrong-lookout-2: Message: no such element: Unable to locate element: {"method":"css selector","selector":".ui-layout-center, #firecam-view"}
+  (Session info: chrome=143.0.7499.192); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x62bdcc3cc40a <unknown>
+#1 0x62bdcbe0076b <unknown>
+#2 0x62bdcbe51e88 <unknown>
+#3 0x62bdcbe520c1 <unknown>
+#4 0x62bdcbea02c4 <unknown>
+#5 0x62bdcbe9d760 <unknown>
+#6 0x62bdcbe447b2 <unknown>
+#7 0x62bdcbe45461 <unknown>
+#8 0x62bdcc394df9 <unknown>
+#9 0x62bdcc397d5d <unknown>
+#10 0x62bdcc37db41 <unknown>
+#11 0x62bdcc39893b <unknown>
+#12 0x62bdcc364870 <unknown>
+#13 0x62bdcc3b9828 <unknown>
+#14 0x62bdcc3b99fc <unknown>
+#15 0x62bdcc3cb763 <unknown>
+#16 0x79f83b616044 <unknown>
+
+2026-01-08 22:58:00,306 - INFO - Traitement: ca-babbitt-peak-1
+2026-01-08 22:58:05,463 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/ca-babbitt-peak-1.png, Local=alertwildfire_data/raw/20260108_225604/ca-babbitt-peak-1.png
+2026-01-08 22:58:06,465 - INFO - Traitement: ca-bald-mtn-eldorado-1
+2026-01-08 22:58:11,014 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/ca-bald-mtn-eldorado-1.png, Local=alertwildfire_data/raw/20260108_225604/ca-bald-mtn-eldorado-1.png
+2026-01-08 22:58:12,017 - INFO - Traitement: ca-bald-mtn-eldorado-2
+2026-01-08 22:58:16,730 - INFO - ✅ Sauvegardé: S3=raw/20260108_225604/ca-bald-mtn-eldorado-2.png, Local=alertwildfire_data/raw/20260108_225604/ca-bald-mtn-eldorado-2.png
+2026-01-08 22:58:17,924 - INFO - Fin du Batch 20260108_225604. Résumé: {'total': 10, 'success': 6, 'failed': 4}

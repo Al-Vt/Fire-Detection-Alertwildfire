@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # --- 1. Serveur MLflow (Connecté à Neon + S3) ---
+  mlflow:
+    build: ./mlflow_custom         # On construit notre image custom avec psycopg2
+    container_name: mlflow_server
+    ports:
+      - "5000:5000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - MLFLOW_S3_ENDPOINT_URL=https://s3.${AWS_REGION}.amazonaws.com
+    # On lui dit de stocker les métadonnées dans Neon et les fichiers sur S3
+    command: >
+      mlflow server
+      --backend-store-uri ${DATABASE_URL}
+      --default-artifact-root s3://${S3_BUCKET_NAME}/mlflow_artifacts
+      --host 0.0.0.0
+    restart: unless-stopped
+
+  # --- 2. Airflow (L'Orchestrateur - Connecté à Neon) ---
+  airflow:
+    build: ./airflow_custom        # On construit notre image custom avec Chrome + Torch
+    container_name: airflow_standalone
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      # Attention: Airflow a besoin de 'postgresql://' et non 'postgres://'
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=${AIRFLOW_DB_URL}
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      # Dans docker-compose.yml, section airflow -> environment
+      - AIRFLOW__EMAIL__EMAIL_BACKEND=airflow.utils.email.send_email_smtp
+      - AIRFLOW__SMTP__SMTP_HOST=smtp.gmail.com
+      - AIRFLOW__SMTP__SMTP_STARTTLS=True
+      - AIRFLOW__SMTP__SMTP_SSL=False
+      - AIRFLOW__SMTP__SMTP_USER=axel.vilamot@gmail.com
+      - AIRFLOW__SMTP__SMTP_PASSWORD=${SMTP_PASSWORD}
+      - AIRFLOW__SMTP__SMTP_PORT=587
+      - AIRFLOW__SMTP__SMTP_MAIL_FROM=axel.vilamot@gmail.com
+      # Variables passées aux scripts Python (DAGs)
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - S3_BUCKET_NAME=${S3_BUCKET_NAME}
+      - DATABASE_URL=${DATABASE_URL}
+      - AWS_SNS_TOPIC_ARN=${AWS_SNS_TOPIC_ARN}
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    volumes:
+      - ./dags:/opt/airflow/dags  # Montage du dossier local vers le conteneur
+    ports:
+      - "8080:8080"
+    # Commande d'initialisation + création user + lancement
+    command: bash -c "airflow db init && airflow standalone"
+    depends_on:
+      - mlflow
+    restart: unless-stopped

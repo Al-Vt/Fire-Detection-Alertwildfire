@@ -1,0 +1,35 @@
+2026-01-08 22:31:32,598 - INFO - Found credentials in environment variables.
+2026-01-08 22:31:33,049 - INFO - Démarrage Batch 20260108_223132...
+2026-01-08 22:31:33,051 - INFO - ====== WebDriver manager ======
+2026-01-08 22:31:33,277 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:31:33,408 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:31:33,586 - INFO - Driver [/home/airflow/.wdm/drivers/chromedriver/linux64/143.0.7499.192/chromedriver-linux64/chromedriver] found in cache
+2026-01-08 22:31:34,298 - INFO - Lancement du batch sur 3 caméras...
+2026-01-08 22:31:34,299 - INFO - Traitement: ca-alder-hill-1
+2026-01-08 22:31:42,132 - INFO - ✅ Sauvegardé: S3=raw/20260108_223132/ca-alder-hill-1.png, Local=alertwildfire_data/raw/20260108_223132/ca-alder-hill-1.png
+2026-01-08 22:31:43,135 - INFO - Traitement: ca-alpine-meadows-ctc-1
+2026-01-08 22:31:48,493 - INFO - ✅ Sauvegardé: S3=raw/20260108_223132/ca-alpine-meadows-ctc-1.png, Local=alertwildfire_data/raw/20260108_223132/ca-alpine-meadows-ctc-1.png
+2026-01-08 22:31:49,497 - INFO - Traitement: ca-alta-peak-1
+2026-01-08 22:32:10,743 - WARNING - Fallback conteneur pour ca-alta-peak-1
+2026-01-08 22:32:10,796 - ERROR - ❌ ÉCHEC ca-alta-peak-1: Message: no such element: Unable to locate element: {"method":"css selector","selector":".ui-layout-center, #firecam-view"}
+  (Session info: chrome=143.0.7499.192); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x625cc88c240a <unknown>
+#1 0x625cc82f676b <unknown>
+#2 0x625cc8347e88 <unknown>
+#3 0x625cc83480c1 <unknown>
+#4 0x625cc83962c4 <unknown>
+#5 0x625cc8393760 <unknown>
+#6 0x625cc833a7b2 <unknown>
+#7 0x625cc833b461 <unknown>
+#8 0x625cc888adf9 <unknown>
+#9 0x625cc888dd5d <unknown>
+#10 0x625cc8873b41 <unknown>
+#11 0x625cc888e93b <unknown>
+#12 0x625cc885a870 <unknown>
+#13 0x625cc88af828 <unknown>
+#14 0x625cc88af9fc <unknown>
+#15 0x625cc88c1763 <unknown>
+#16 0x7912cd7c2044 <unknown>
+
+2026-01-08 22:32:12,587 - INFO - Fin du Batch 20260108_223132. Résumé: {'total': 3, 'success': 2, 'failed': 1}

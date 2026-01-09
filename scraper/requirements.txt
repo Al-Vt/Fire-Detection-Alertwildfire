@@ -1,0 +1,7 @@
+selenium
+webdriver-manager
+boto3
+psycopg2-binary
+python-dotenv
+requests
+urllib3

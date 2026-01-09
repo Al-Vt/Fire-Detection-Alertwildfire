@@ -1,0 +1,27 @@
+2026-01-08 22:29:46,850 - INFO - Found credentials in environment variables.
+2026-01-08 22:29:48,105 - INFO - Démarrage Batch 20260108_222946...
+2026-01-08 22:29:48,107 - INFO - ====== WebDriver manager ======
+2026-01-08 22:29:48,813 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:29:49,077 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:29:49,227 - INFO - There is no [linux64] chromedriver "143.0.7499.192" for browser google-chrome "143.0.7499" in cache
+2026-01-08 22:29:49,244 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:29:49,685 - INFO - WebDriver version 143.0.7499.192 selected
+2026-01-08 22:29:49,697 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.192/linux64/chromedriver-linux64.zip
+2026-01-08 22:29:49,699 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.192/linux64/chromedriver-linux64.zip
+2026-01-08 22:29:49,960 - INFO - Driver downloading response is 200
+2026-01-08 22:29:51,560 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-08 22:29:52,121 - INFO - Driver has been saved in cache [/home/airflow/.wdm/drivers/chromedriver/linux64/143.0.7499.192]
+2026-01-08 22:29:54,288 - INFO - Lancement du batch sur 2 caméras...
+2026-01-08 22:29:54,291 - INFO - Traitement: ca-alder-hill-1
+2026-01-08 22:30:03,868 - ERROR - Erreur insert_image: relation "images" does not exist
+LINE 2:         INSERT INTO images (batch_id, camera_name, s3_path, ...
+                            ^
+
+2026-01-08 22:30:03,870 - INFO - ✅ Sauvegardé: S3=raw/20260108_222946/ca-alder-hill-1.png, Local=alertwildfire_data/raw/20260108_222946/ca-alder-hill-1.png
+2026-01-08 22:30:04,873 - INFO - Traitement: ca-alpine-meadows-ctc-1
+2026-01-08 22:30:12,000 - ERROR - Erreur insert_image: relation "images" does not exist
+LINE 2:         INSERT INTO images (batch_id, camera_name, s3_path, ...
+                            ^
+
+2026-01-08 22:30:12,004 - INFO - ✅ Sauvegardé: S3=raw/20260108_222946/ca-alpine-meadows-ctc-1.png, Local=alertwildfire_data/raw/20260108_222946/ca-alpine-meadows-ctc-1.png
+2026-01-08 22:30:13,154 - INFO - Fin du Batch 20260108_222946. Résumé: {'total': 2, 'success': 2, 'failed': 0}

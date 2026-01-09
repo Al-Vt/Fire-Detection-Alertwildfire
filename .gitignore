@@ -1,0 +1,7 @@
+dataset/
+Data/
+images/
+*.h5
+*.pt
+__pycache__/
+.env
