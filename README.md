@@ -70,6 +70,7 @@ Un pipeline MLOps complet qui :
 -  **Modèle** : YOLOv8 Nano (optimisé vitesse/précision)
 -  **Dataset** : 33,636 images (Pyro-SDIS)
 -  **Fine-tuning** : 50 époques avec augmentation de données
+-  Dégèle de la tête et du coup
 -  **Performance** : 77.3% précision, 76.9% rappel, 83.3% mAP50
 -  **Inférence** : ~30ms/image (CPU) ou ~3ms/image (GPU)
 
