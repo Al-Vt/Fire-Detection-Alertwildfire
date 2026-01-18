@@ -39,6 +39,8 @@
 
 Ce projet implémente un **système automatisé de détection d'incendies forestiers** utilisant l'intelligence artificielle pour analyser en temps réel les flux de 165 caméras de surveillance du réseau [ALERTWildfire](https://www.alertwildfire.org/).
 
+Le modèle YOLOv8 a été fine-tuné pour détecter uniquement la fumée dans les images de caméras, car elle représente le signal précoce d’un incendie, permettant d’alerter avant l’apparition des flammes.
+
 ### Le problème
 
 Les incendies de forêt se propagent rapidement et causent des dégâts catastrophiques. Une détection précoce, même de quelques minutes, peut :
